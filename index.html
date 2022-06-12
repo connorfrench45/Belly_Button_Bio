@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body style="background-color:lightgray">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1 style="color:white"><b>Belly Button Biodiversity Dashboard</b></h1>
+        <p style="color:white">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Is the next breakthrough for vegan meat in your belly button?</h3>
+      </div>
+      <div class="col-md-8">
+        <p>The field of lab-grown meat alternatives is progressing at a rapid pace, though that won't stop us researchers from looking for breakthroughs wherever we think we can find them. Have you ever had an Improbable Beef burger and thought it could still taste even better? We think the key to a more delicious, meatier flavor may be found on our own bodies! Use your ID number below to visualize the boidiversity of your belly button, and if you're feeling extra curious, check out other participants' graphs and see how your's compares!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <p>These are the 10 most common types of bacteria found in your Belly Button</p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <p>What effect does washing frequency have on bacteria amount and Variety?</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>Down below you'll find a visualization of all the bacteria found. How does your ecosystem compare with others?</p>
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
